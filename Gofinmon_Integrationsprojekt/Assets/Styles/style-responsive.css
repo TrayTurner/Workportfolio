@@ -1,0 +1,240 @@
+/** CSS für Notebooks mit kleinerem Bildschirm; Anastasia Ruppel */
+
+@media screen and (max-width: 1280px){
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 40px;
+        padding: 50px 0 0 50px;
+        margin: 0px 0 15px 0;
+    }
+
+    #navibar{
+        height: 60px;
+    }
+
+    #navibar .navbar-brand {
+        color: transparent;
+        background: url("../Icons/gofinmon_logo.png") no-repeat top left;
+        background-size: contain;
+        max-width: 140px;
+        margin-right: 30px;
+        margin-top: 5px;
+    }
+
+    #navibar input {
+        margin-top: 0;
+    }
+
+    #navibar button {
+        margin-top: 0;
+    }
+
+    #navibar a {
+        margin-top: 0;
+    }
+
+    #navibar a.dropdown-toggle {
+        margin-top: 0;
+    }
+
+    #navibar .navbar-brand, #navibar .nav.navbar-nav {
+        width: 15%;
+        float: left;
+    }
+
+    #navibar .navbar-form {
+        width: 35%;
+        float: left;
+    }
+
+    #navibar .navbar-form .form-group {
+        position: relative;
+        display: block;
+        width: 90%;
+    }
+
+    #navibar .navbar-form input {
+        width: 100%;
+        border-radius: 5px;
+        border: 0;
+        padding-left: 10px;
+        color: #0E364A;
+    }
+
+    #navibar .navbar-form button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        border-radius: 5px;
+        border: 0;
+        padding: 1px 10px;
+    }
+
+    #navibar .nav.navbar-nav.navbar-right {
+        width: 35%;
+        float: left;
+    }
+
+    #startseite .startseite-banner {
+        padding: 90px 30px 100px;
+    }
+
+    #startseite .startseite-banner .startseite-banner-content {
+        font-size: 18px;
+        max-width: 490px;
+    }
+
+    #startseite .startseite-banner .startseite-banner-content button {
+        font-size: 16px;
+        padding: 8px 15px;
+        margin-right: 20px;
+    }
+
+    /** Startseite Steps*/
+
+    .steps {
+        padding: 50px 30px;
+    }
+
+    .steps .col-sm-4 .step-item {
+        max-width: 285px;
+    }
+
+    .steps .col-sm-4 img {
+        max-width: 90px;
+    }
+
+    /** Section Login */
+
+    /** Erstellung von Benjamin James Turner; Anpassung von Anastasia Ruppel */
+
+    .loginbox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 400px;
+        padding: 40px;
+        background: rgba(255,255,255,.3);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.3);
+        border-radius: 15px;
+    }
+
+    /** Section Kursuebersicht*/
+    #kursuebersicht h4 {
+        font-size: 17px;
+    }
+
+    #kursuebersicht div.col-sm-2 {
+        padding: 25px 0 0 15px;
+        font-size: 16px;
+        right: 78px;
+        width: 19%;
+    }
+
+    #kursuebersicht div.col-sm-5 .kleinerText {
+        font-size: 12px;
+    }
+
+    /** Section Kurs-Detailansicht */
+
+    #kursdetailansicht p#eigenschaften {
+        margin-left: 45px;
+    }
+
+    #kursdetailansicht video {
+        width: 70vm;
+        height: auto;
+    }
+
+    #kursdetailansicht div.col-sm-2 span {
+        width: 5px;
+        padding: 5px;
+        font-size: 20px;
+    }
+
+
+    /** Section Belegte Kurse (Profil) */
+
+    #profil_belegtkurse h4 {
+        font-size: 17px;
+    }
+
+    #profil_belegtkurse div.col-sm-2 {
+        padding: 25px 0 0 15px;
+        font-size: 16px;
+        right: 78px;
+        width: 19%;
+    }
+
+    #profil_belegtkurse div.col-sm-5 .kleinerText {
+        font-size: 12px;
+    }
+
+    #profil_belegtkurse .auto {
+        margin-left: 125px;
+    }
+
+    #profil_belegtkurse p {
+        padding: 5px;
+    }
+
+    /** Infos von Jessica Palladino*/
+    .auto .col-sm-6 {
+        margin-left: 50px;
+        width: 700px;
+        padding: 5px 5px;
+    }
+
+    .col-sm-4 .autob {
+        background-color: #E4EBED;
+        margin-left: 100px;
+        height: 50vh;
+        width: 80%;
+        padding: 20px 5px;
+        border-radius: 8px;
+        text-align: center;
+        border: 0.8px solid #0E364A;
+
+    }
+
+    .col-sm-4 .autob #fett {
+        font-size: 18px;
+    }
+
+    #infos .logoinfo {
+        color: transparent;
+        background: url("../Icons/gofinmon_logo_dunkel.png") no-repeat bottom left;
+        background-size: contain;
+        max-width: 400px;
+        height: auto;
+        padding: 45px;
+        position: relative;
+        bottom: 15px;
+    }
+
+    #infos button {
+        float: right;
+        margin-top: 65px;
+        margin-right: 90px;
+        width: 300px;
+        padding: 20px;
+        border-radius: 8px;
+        border: 0.5px solid #0E364A;
+        background-color: #66CDFF;
+        color: #fff;
+        font-weight: bold;
+        font-size: 17px;
+        transition: all 0.25s ease;
+    }
+}

@@ -1,0 +1,34 @@
+Anmerkungen:
+
+- immer json benutzen bitte
+
+-kommentare der anderen ansehen, um fehler zu vermeiden
+
+- die url in ajax im server genauso übernehmen
+
+- datum  felder nachgucken
+
+-datenbank benutzername muss raus und datum feld 3 stück....sobald es geändert wurde, kann es aus der liste raus
+
+- copyrightzeichen fehlt
+
+- form bei footer anastasia
+
+- macht euch bitte den linter an, damit unsere code  quali besser ist....das wird bewertet
+
+- ES MUSS AUCH AJAX LOG IN GEMACHT WERDN
+
+- wenn man auf profil button klickt bekommt man seine daten geschickt, dass hat mit login check zu tun // Sendet die privaten Daten, falls autorisiert
+
+-TODO Bitte alle lesen:
+     - login funktioniert komplett/ Stand 06.07.19/ Testroute hat funktioniert
+     -log out muss komplett gemacht werden
+     -durchstich muss erfolgen (Client zur Datenbank) .... BJ wollte das machen
+     - button profil bearbeiten muss erstmal reg abschicken heißen und muss es in profil bearbeiten umswitchen
+
+-Für den 2. Sprint:
+     wenn man auf prodfil klickt, bekommt man seine daten: steht auch in moodle
+     fragen:
+     - BENUTZERRECHTE MIT EINBINDEN
+
+     Sophie TODO index

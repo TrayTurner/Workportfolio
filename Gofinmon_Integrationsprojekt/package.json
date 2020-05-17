@@ -1,0 +1,26 @@
+{
+  "name": "usermanager-client-only",
+  "version": "1.0.0",
+  "description": "Der Userman als CO-Version für WebP1 im WS18/19",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manuel Groh",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bootstrap": "^4.3.1",
+    "@types/express-session": "^1.15.13",
+    "@types/jquery": "^3.3.22",
+    "@types/mysql": "^2.15.6",
+    "bootstrap": "^4.1.3",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "jquery": "^3.4.0",
+    "mysql": "^2.17.1",
+    "session": "^0.1.0",
+    "tsconfig.json": "^1.0.6",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}

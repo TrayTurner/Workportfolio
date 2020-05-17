@@ -1,0 +1,136 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+
+###// Testen der POST-Route; Ceyhan Efer
+
+POST http://localhost:8080/create
+Content-Type: application/json
+
+{
+  "vorname": "Sebastian",
+  "nachname": "Schmitt",
+  "geburtstagtag": "23",
+  "geburtsmonat": "peter",
+  "geburtsjahr": "1992",
+  "email": "sebastian.schmitt@gmail.commmmmm",
+  "strasse": "Schillerstr",
+  "hausnr": "80",
+  "ort": "Linden",
+  "plz": "35440",
+  "telefonnummer": "01576588542",
+  "bic": "VBMHDE5F",
+  "iban": "DE42500105175953946933",
+  "passwort": "Blume123"
+}
+
+### Post-Route mit fehlerhaften Daten von Jessica Palladino zum Testen
+POST http://localhost:8080/create
+Content-Type: application/json
+
+{
+"vorname": "Sebastian",
+"nachname": "Schmitt",
+"geburtstagtag": "23",
+"geburtsmonat": "oktober",
+"geburtsjahr": "",
+"email": "sebastian.schmitt@gmail.comm",
+"strasse": "Schillerstr",
+"hausnr": "kk",
+"ort": "Linden",
+"plz": "D-35440",
+"telefonnummer": "0157-6588542",
+"bic": "VBMHDE5F",
+"iban": "DE42500105175953946933",
+"passwort": "Blume123"
+}
+
+### Testen der Post Route für die Kurserstellung von Sophie Multiszewski
+POST http://localhost:8080/createKurs
+Content-Type: application/json
+
+{
+  "kursname": "llll",
+  "preis": "23"
+}
+
+### Testen von GET-Route; Ceyhan Efer
+
+GET http://localhost:8080/benutzer/5
+
+###
+// Testen der Login Route; Sophie Multiszewski
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "loginemail": "petermueller@gmx.de",
+  "loginpasswort": "hallo123"
+}
+
+### PUT-Route erstellt von Anastasia Ruppel
+
+PUT http://localhost:8080/update/1
+Content-Type: application/json
+
+{
+  "vorname": "kk",
+  "nachname": "kskjadadskdbdhbd",
+  "geburtstagtag": "09",
+  "geburtsmonat": "Oktober",
+  "geburtsjahr": "1996",
+  "email": "hanna.lauer@web.de",
+  "strasse": "Wiesenweg",
+  "hausnr": "15",
+  "ort": "Linden",
+  "plz": "35440",
+  "telefonnummer": "01576534562",
+  "bic": "VHG51K",
+  "iban": "DE20 61903488 35195639 21",
+  "passwort": "abc123"
+}
+
+### Zum Testen der DELETE Route; Sophie Multiszewski
+
+DELETE http://localhost:8080/delete/kurs/1
+
+### DELETE von Anastasia Ruppel zum Löschen eines Users
+
+DELETE http://localhost:8080/delete/benutzer/1
+
+### POST von Jessica Palladino zum Testen des Logouts
+
+POST http://localhost:8080/logout
+Content-Type: application/json
+
+{
+  "email": "petermueller@gmx.de"
+}
+
+### GET zum Testen des Logins von Jessica Palladino
+
+GET http://localhost:8080/login/check
+
+### DELETE von BJ Turner zum Löschen eines Users
+
+DELETE http://localhost:8080/delete/benutzer/1
+
+### PUT von Anastasia Ruppel zum Editieren von Kursen
+
+PUT http://localhost:8080/kursupdate/1
+Content-Type: application/json
+
+{
+  "kursname": "Spaß mit Kursen",
+  "preis": "199 Euro"
+}
+
+### GET zum Auslesen eines Kurses; Ceyhan Efer
+
+GET http://localhost:8080/kursauslesen/1
+
+###

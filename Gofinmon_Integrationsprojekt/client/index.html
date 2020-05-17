@@ -1,0 +1,884 @@
+<!--
+HTML von gofinmon
+Autor: Team-03
+Aufteilung der Aufgaben gekennzeichnet durch Namen im jeweiligen Code-Abschnitt
+Version 1.5 (15.07.2019)
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOFINMON</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/Styles/style.css">
+    <link rel="stylesheet" href="../Assets/Styles/style-responsive.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="../server.js"></script>
+    <script type="text/javascript" src="client.js"></script>
+
+
+</head>
+<body>
+<div class="startseite">
+    <!--bearbeitet von Jessica Palladino -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav id="navibar" class="navbar navbar-inverse">
+                    <div class="dropdown">
+                        <a class="navbar-brand" href="#startseite">gofinmon</a>
+                        <ul class="nav navbar-nav">
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Kategorien
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#kursuebersicht">Geldanlagen <span class="caret toright"></span></a>
+
+
+                                        <ul class="dropdown-content second-level">
+                                            <li><a href="#kursuebersicht">Aktien <span class="caret toright"></span></a>
+
+                                                <ul class="dropdown-content third-level">
+                                                    <li><a href="#kursuebersicht">Die Aktienkultur</a></li>
+                                                    <li><a href="#kursuebersicht">Erste Schritte</a></li>
+                                                    <li><a href="#kursuebersicht">Risiken</a></li>
+                                                    <li><a href="#kursuebersicht">Aktienformen</a></li>
+                                                    <li><a href="#kursuebersicht">Wert der Aktie</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="#">Bausparvertrag</a></li>
+                                            <li><a href="#">Immobilien <span class="caret toright"></span></a>
+                                                <ul class="dropdown-content third-level">
+                                                    <li><a href="#kursuebersicht">Der Immobilienmarkt</a></li>
+                                                    <li><a href="#kursuebersicht">Vorteile</a></li>
+                                                    <li><a href="#kursuebersicht">Risiken</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#kursuebersicht">Sparbuch</a></li>
+                                            <li><a href="#kursuebersicht">Gold</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#kursuebersicht">Altersvorsorge</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search.." name="search">
+                                <button type="button"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#support"><span></span>Support</a></li>
+                            <li id="navloginbtn"><a href="#login">Login</a></li>
+                            <li id="navlogoutbtn" style="display: none;"><a href="#">Logout</a></li>
+                            <li id="geheimnis"><a href="#profil">Registrieren</a></li>
+                            <li id="profilbtn"><a href="#profil">Profil</a></li>
+                        </ul>
+                    </div>
+                    <div style="clear: both" ;></div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- von Jessica Palladino-->
+<section id="startseite">
+    <div class="startseite-banner">
+        <div class="startseite-banner-content">
+            <h1>Wilkommen auf gofinmon.de</h1><br>
+            <p> Wir machen Sie fit in Finanzen!<br>
+                Wir sind eine E-Learning-Plattform über Finanzen mit dem Schwerpunkt Geldanlage Altersvorsorge.</p><br>
+            <button><a href="#kursuebersicht">Zu den Kursen</a></button>
+            <button><a href="#infos">Jetzt Dozent werden</a></button>
+        </div>
+    </div>
+
+    <div class="row steps">
+        <div class="col-sm-4">
+            <div class="step-item">
+                <img src="../Assets/Icons/lupe.png" alt="Suchen">
+                <p>Finden Sie in unserem vielfältigen Angebot den richtigen Kurs</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="step-item">
+                <img src="../Assets/Icons/lernen.png" alt="Lernen">
+                <p>Lernen Sie nachhaltiges Wissen von unseren Finanzexperten</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="step-item">
+                <img src="../Assets/Icons/zertifikat.png" alt="Wissen">
+                <p>Glänzen Sie nach Abschluss der Kurse mit Ihrem neuen Wissen</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ceyhan Efer und Benjamin Turner -->
+<section id="login">
+    <div class="login">
+        <div class="container-fluid">
+            <div class="col">
+                <div class="loginbox">
+                    <div class="col">
+                        <div class="hide-md-lg">
+                            <h1 class="ueberschrift">Login</h1>
+                        </div>
+                        <form id="inputlogin">
+                            <div class="inputbox">
+                                <div>
+                                    <input type="text" class="form-control" id="loginemail" name="email"
+                                           placeholder="E-Mail" required>
+                                </div>
+                                <div>
+                                    <input type="password" class="form-control" id="loginpasswort" name="passwort"
+                                           placeholder="Passwort"
+                                           required>
+                                </div>
+                                <div>
+                                    <button type="submit" id="loginbtn">
+                                        Anmelden
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ceyhan Efer und Jessica Palladino -->
+<section id="kursuebersicht">
+    <h2>Kurs&uuml;bersicht</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-2">
+                <p>Bewertung</p>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Note 1</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Note 2</label>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Note 3</label>
+                    </div>
+                </div>
+                <br>
+                <p>Dauer</p>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Unter 1h</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Unter 2h</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Mehr als 2h</label>
+                </div>
+                <br>
+                <p>Schwierigkeit</p>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Leicht</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Mittel</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Schwer</label>
+                </div>
+            </div>
+            <div class="auto">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <video controls>
+                            <source src="movie.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="col-sm-5">
+                        <h4><a href="#kursdetailansicht" id="kurs1" pk_kurs_id="1">Die Rolle der Börse</a></h4>
+                        <p>Nur wenige Deutsche legen ihr Geld in Aktien an. Für viele ist sie ein
+                            komplexer und undurchsichtiger Ort der Spekulationen. Das trifft aber nicht zu: Aktien
+                            sind Beteiligungen an Unternehmen und auf lange Sicht lukrativer als alle anderen
+                            Anlageformen.
+                        </p>
+                        <p class="kleinerText">Kursdauer 1:43h | Note: 2,1 | Kurschwierigkeit: Leicht | Preis 75€</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <video controls>
+                            <source src="movie.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="col-sm-5">
+                        <h4><a href="#kursdetailansicht" id="kurs2" pk_kurs_id="2">Spielend leichter Vermögensaufbau</a>
+                        </h4>
+                        <p>Kommen Sie mit auf meine Reise durch die Finanzwelt. Ich erkläre Ihnen kurz
+                            und knackig, wie es Ihnen gelingt, in kürzester Zeit ein kleines Vermögen
+                            aufzubauen. Denn das ist tatsächlich einfacher als gedacht. Natürlich gehört dazu, dass
+                            man vom Geld ausgeben nicht reicht wird, allerdings reichen oft schon kleine Geldbeträge
+                            um an sein Ziel zu kommen.
+                        </p>
+                        <p class="kleinerText">Kursdauer 1:21h | Note: 2 | Kurschwierigkeit: Mittel | Preis 119€</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <video controls>
+                            <source src="movie.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="col-sm-5">
+                        <h4><a href="#kursdetailansicht" id="kurs3" pk_kurs_id="3">Schritt für Schritt zum Traumhaus</a>
+                        </h4>
+                        <p>Jeder hat den Traum vom Eigenheim. Ich möchte Ihnen erklären, wie Sie Ihr
+                            Geld investieren müssen,damit Sie sich Ihren Traum erfüllen können.
+                        </p>
+                        <p class="kleinerText">Kursdauer 1:35h | Note: 1,8 | Kurschwierigkeit: Leicht | Preis 99€</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ceyhan Efer und Jessica Palladino -->
+<section id="kursdetailansicht">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <form id="formkurs">
+                    <input type="text" class="form-control" placeholder="Kursname" id="kursName" style="display: none"
+                           required>
+                    <h3 id="kursNewName">Kursname</h3>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <button type="button" id="kursEdit"><i class="far fa-edit"></i></button>
+                <button type="button" id="kursDelete"><i class="fas fa-trash-alt"></i></button>
+                <button type="submit" id="kursCreate">Erstellen</button>
+                <button type="submit" id="kursSave" style="display: none">Speichern</button>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" placeholder="Preis" id="kursPreis" style="display: none"
+                       required>
+                <span id="newPreis">Preis</span>
+            </div>
+            <div class="col-sm-2">
+                <button id="buchen">Kurs buchen</button>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <p id="eigenschaften">&Oslash;2,2 &nbsp; &nbsp; &nbsp; 07.04.2020 &nbsp; &nbsp; &nbsp; 236 Teilnehmer</p>
+    <br><br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <video controls>
+                    <source src="movie.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-sm-3">
+                <div id="merkmale">
+                    <img src="../Assets/Bilder/sabine_meier.png" class="rounded float-left"
+                         alt="profilbild">
+                    <h4>Sabine Meier</h4>
+                    <p>Finanzcoach mit Schwerpunkt Risiko Controlling</p>
+                </div>
+                <p>Seit 20 Jahren bin ich im Bereich des Risiko-Controllings tätig.
+                    Nun arbeite ich schon seit 6 Jahren als Finanzcoach.
+                    Ich möchte Sie spielend leicht in die Finanzwelt einführen.</p>
+            </div>
+            <div class="col-sm-3 button">
+                <button type="button" id="KursBewerten">Kurs bewerten</button>
+            </div>
+        </div>
+
+        <!-- Modalfenster; Sophie Multiszewski-->
+        <div class="modal" id="editmodalkurse" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" id="formeditkurs">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Kurs aktualisieren</h2>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="kurseditform">
+                            <div class="form-group">
+                                <label for="editkursname" class="col-form-label">Kursname</label>
+                                <input type="text" class="form-control" id="editkursname">
+                            </div>
+                            <div class="form-group">
+                                <label for="editnachname" class="col-form-label">Preis</label>
+                                <input type="text" class="form-control" id="editpreis">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen
+                                </button>
+                                <button type="button" class="btn btn-info" id="editmodalbtnkurs">Speichern</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--von Jessica Palladino & Ceyhan Efer-->
+<section id="kursdetail-register">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="nav nav-tabs">
+                    <li class="active one"><a>Kursbeschreibung</a></li>
+                    <li class="active"><a>Kursunterlagen</a></li>
+                    <li class="active"><a>Gliederung</a></li>
+                    <li class="active"><a>Downloads</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid box">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="../Assets/Icons/Schwierigkeit.png" class="rounded float-left"
+                     alt="hier soll der Schwierigkeitsgrad angezeigt werden">
+                <p>Schwierigkeit</p>
+                <br>
+                <img src="../Assets/Icons/Uhr.png" class="rounded float-left"
+                     alt="hier soll die Dauer des Kurses angezeigt werden">
+                <p>1:21 h</p>
+            </div>
+            <div class="col-sm-8">
+                <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="12">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Benjamin James Turner -->
+<section id="profil">
+    <h2 id="hprofil" style="display: none">Profil</h2>
+    <h2 id="hreg">Registrieren</h2>
+    <div class="container-fluid">
+        <form id="forminput">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="../Assets/Icons/fotoplatzhalter.png" class="rounded float-left" alt="profilbild">
+                    </div>
+                    <div class="col-sm-3 name" style="width: 20%">
+                        <span id="profilvorname"></span><span id="profilnachname"></span>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                                <textarea class="form-control" placeholder="Biografie" id="input_biografie"
+                                          rows="14" style="display: none"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="reginputs">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="col-sm-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <input type="text" class="form-control" placeholder="Vorname" id="vorname"
+                                               required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <input type="text" class="form-control" placeholder="Nachname" id="nachname"
+                                               required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <input type="text" class="form-control" placeholder="Ort" id="ort" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <input type="text" class="form-control" placeholder="PLZ" id="plz" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="col-sm-2">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <select name="status" class="form-control" id="geburtstagtag">
+                                            <!-- Drop Down von Sophie Multiszewski-->
+                                            <option>TT</option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <select name="status" class="form-control" id="geburtsmonat">
+                                            <!-- Drop Down; Sophie Multiszewski-->
+                                            <option>MM</option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <select name="status" class="form-control" id="geburtsjahr">
+                                            <!-- Drop Down; Sophie Multiszewski-->
+                                            <option>YYYY</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2001">2001</option>
+                                            <option value="1999">1999</option>
+                                            <option value="1997">1997</option>
+                                            <option value="1996">1996</option>
+                                            <option value="1995">1995</option>
+                                            <option value="1994">1994</option>
+                                            <option value="1993">1993</option>
+                                            <option value="1992">1992</option>
+                                            <option value="1991">1991</option>
+                                            <option value="1990">1990</option>
+                                            <option value="1989">1989</option>
+                                            <option value="1987">1987</option>
+                                            <option value="1986">1986</option>
+                                            <option value="1985">1985</option>
+                                            <option value="1984">1984</option>
+                                            <option value="1983">1983</option>
+                                            <option value="1982">1982</option>
+                                            <option value="1981">1981</option>
+                                            <option value="1980">1980</option>
+                                            <option value="1979">1979</option>
+                                            <option value="1978">1978</option>
+                                            <option value="1977">1977</option>
+                                            <option value="1976">1976</option>
+                                            <option value="1975">1975</option>
+                                            <option value="1974">1974</option>
+                                            <option value="1973">1973</option>
+                                            <option value="1972">1972</option>
+                                            <option value="1971">1971</option>
+                                            <option value="1970">1970</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <input type="text" class="form-control" placeholder="Telefonnummer"
+                                           id="telefonnummer"
+                                           required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <input type="text" class="form-control" placeholder="E-Mail Adresse" id="email"
+                                           required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <input type="text" class="form-control" placeholder="BIC" id="bic" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <input type="text" class="form-control" placeholder="IBAN" id="iban" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="col-sm-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <input type="text" class="form-control" placeholder="Straße" id="strasse"
+                                               required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <input type="text" class="form-control" placeholder="Hausnr." id="hausnr"
+                                               required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <input type="password" class="form-control" placeholder="Passwort" id="passwort"
+                                           required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <input type="password" class="form-control" placeholder="Passwort wiederholen"
+                                           id="repeatpasswort"
+                                           required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn-btn-info" style="float:right" id="registrieren">Registrieren</button>
+            <button type="button" class="btn-btn-info" style="float:right; display: none;" id="delete">Profil löschen
+            </button>
+            <button type="button" class="btn-btn-info" style="float:right; display: none;" id="edit">Profil bearbeiten
+            </button>
+        </form>
+    </div>
+    <!-- Modalfenster von Sophie Multiszewski-->
+    <div class="modal" id="editmodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" id="formEdit">
+                <div class="modal-header">
+                    <h2 class="modal-title">Profil aktualisieren</h2>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="editvorname" class="col-form-label">Vorname</label>
+                            <input type="text" class="form-control" id="editvorname">
+                        </div>
+                        <div class="form-group">
+                            <label for="editnachname" class="col-form-label">Nachname</label>
+                            <input type="text" class="form-control" id="editnachname">
+                        </div>
+                        <div class="form-group" id="geburtstagsbox">
+                            <label for="editgeburtstag" class="col-form-label">Geburtstag</label>
+                            <input type="text" class="form-control" id="editgeburtstag">
+                            <input type="text" class="form-control" id="editgeburtsmonat">
+                            <input type="text" class="form-control" id="editgeburtsjahr">
+                        </div>
+                        <div class="form-group">
+                            <label for="editemail" class="col-form-label">Email</label>
+                            <input type="text" class="form-control" id="editemail">
+                        </div>
+                        <div class="form-group">
+                            <label for="editstrasse" class="col-form-label">Straße</label>
+                            <input type="text" class="form-control" id="editstrasse">
+                        </div>
+                        <div class="form-group">
+                            <label for="edithausnr" class="col-form-label">Hausnummer</label>
+                            <input type="text" class="form-control" id="edithausnr">
+                        </div>
+                        <div class="form-group">
+                            <label for="editort" class="col-form-label">Ort</label>
+                            <input type="text" class="form-control" id="editort">
+                        </div>
+                        <div class="form-group">
+                            <label for="editplz" class="col-form-label">Postleitzahl</label>
+                            <input type="text" class="form-control" id="editplz">
+                        </div>
+                        <div class="form-group">
+                            <label for="edittelefonnummer" class="col-form-label">Teleonnummer</label>
+                            <input type="text" class="form-control" id="edittelefonnummer">
+                        </div>
+                        <div class="form-group">
+                            <label for="editbic" class="col-form-label">BIC</label>
+                            <input type="text" class="form-control" id="editbic">
+                        </div>
+                        <div class="form-group">
+                            <label for="editiban" class="col-form-label">IBAN</label>
+                            <input type="text" class="form-control" id="editiban">
+                        </div>
+                        <div class="form-group">
+                            <label for="editpasswort" class="col-form-label">Passwort</label>
+                            <input type="text" class="form-control" id="editpasswort">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                    <button type="button" class="btn btn-info" id="editmodalbtn">Speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="profil_belegtkurse">
+    <div class="auto">
+        <div class="row belegt">
+            <span>Belegte Kurse</span>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <video controls>
+                    <source src="movie.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-sm-5">
+                <h4><a href="#kursdetailansicht" id="kurs1" pk_kurs_id="1">Die Rolle der Börse</a></h4>
+                <p>Nur wenige Deutsche legen ihr Geld in Aktien an. Für viele ist sie ein
+                    komplexer und undurchsichtiger Ort der Spekulationen. Das trifft aber nicht zu: Aktien
+                    sind Beteiligungen an Unternehmen und auf lange Sicht lukrativer als alle anderen Anlageformen.
+                </p>
+                <p class="kleinerText">Kursdauer 1:43h | Note: 2,1 | Kurschwierigkeit: Leicht | Preis 75€</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <video controls>
+                    <source src="movie.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-sm-5">
+                <h4><a href="#kursdetailansicht" id="kurs2" pk_kurs_id="2">Spielend leichter Vermögensaufbau</a>
+                </h4>
+                <p>Kommen Sie mit auf meine Reise durch die Finanzwelt. Ich erkläre Ihnen kurz
+                    und knackig, wie es Ihnen gelingt, in kürzester Zeit ein kleines Vermögen
+                    aufzubauen. Denn das ist tatsächlich einfacher als gedacht. Natürlich gehört dazu, dass
+                    man vom Geld ausgeben nicht reicht wird, allerdings reichen oft schon kleine Geldbeträge
+                    um an sein Ziel zu kommen.
+                </p>
+                <p class="kleinerText">Kursdauer 1:21h | Note: 2 | Kurschwierigkeit: Mittel | Preis 119€</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <video controls>
+                    <source src="movie.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-sm-5">
+                <h4><a href="#kursdetailansicht" id="kurs3" pk_kurs_id="3">Schritt für Schritt zum Traumhaus</a>
+                </h4>
+                <p>Jeder hat den Traum vom Eigenheim. Ich möchte Ihnen erklären, wie Sie Ihr
+                    Geld investieren müssen,damit Sie sich Ihren Traum erfüllen können.
+                </p>
+                <p class="kleinerText">Kursdauer 1:35h | Note: 1,8 | Kurschwierigkeit: Leicht | Preis 99€</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--von Jessica Palladino-->
+<section id="infos">
+    <h2>Voraussetzungen für Dozenten</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="auto">
+                <div class="col-sm-6">
+                    <p>Werden Sie Finanzexperte bei gofinmon.de</p>
+
+                    <p>Wenn Sie eine Ausbildung oder Studium mit dem Schwerpunkt Finanzen absolviert haben, sind Sie bei
+                        uns genau richtig.</p>
+
+                    <p>Nachweise Ihrer Qualifikationen</p>
+
+                    <p>Um unseren Kunden Qualität zu bieten, ist ein Nachweis Ihrer
+                        Qualifikation in Form einer Kopie einzureichen. Damit können wir sicher
+                        gehen, dass bei uns tatsächlich ausgebildete Experten unterrichten.
+                        Ihre Qualifikation ist ebenso für die Kunden einsehbar.</p>
+
+                    <p>Wissensvermittlung mit Spaß</p>
+
+                    <p>Uns liegt es sehr am Herzen, dass Sie als Finanzexperte gerne Ihr
+                        Wissen vermitteln. Wenn Sie Spaß beim Lehren haben, sind Sie bei
+                        gofinmon.de genau richtig!</p>
+                    <p> Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum
+                        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-sm-4">
+                <div class="autob">
+                    <p id="fett">Haben wir Ihr Interesse <br>geweckt?</p>
+
+                    <p>Dann bewerben Sie sich doch als</p>
+                    <p>Dozent unter folgender Email-Adresse:</p>
+
+                    <p>bewerbung@gofinmon.de</p>
+                    <a href="#startseite" class="logoinfo">gofinmon</a>
+                </div>
+            </div>
+            <button class="btn"><a href="#support">Support kontaktieren</a></button>
+        </div>
+    </div>
+
+</section>
+<!--von Anastasia Ruppel-->
+<section id="support">
+    <h2>Support</h2>
+    <form>
+        <div class="form-group">
+            <select class="form-control" id="sel1">
+                <option>Wählen Sie Ihr Thema</option>
+                <option>Technischer Fehler</option>
+                <option>Problemmeldung</option>
+                <option>Sonstiges</option>
+            </select>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Betreff">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="12"
+                          placeholder="Verfassen Sie hier Ihre Nachricht."></textarea>
+            </div>
+        </div>
+        <button type="button" class="btn">Senden</button>
+    </form>
+</section>
+
+</body>
+
+<!-- footer von Sophie Multiszewski-->
+<footer class="dunkelblau textweiss fschrift">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2">Über uns</div>
+        <div class="col-sm-2">Impressum</div>
+        <div class="col-sm-2">Datenschutz</div>
+        <div class="col-sm-2">AGB</div>
+        <div class="col-sm-2"></div>
+    </div>
+    <br>
+    <p class="sophiezentriert textweiss">&copy; 2019 gofinmon GmbH </p>
+</footer>
+</html>

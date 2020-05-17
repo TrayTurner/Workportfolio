@@ -1,0 +1,1030 @@
+/**
+ * CSS von gofinmon
+ * Autor: Team-03
+ * Aufteilung der Aufgaben gekennzeichnet durch Namen im jeweiligen Code-Abschnitt
+ * Version 1.5 (10.07.2019)
+ */
+
+/** Anastasia Ruppel
+ * Corporate Farben für Hintergründe(siehe Mockup)
+ * Dunkelblau für Navbar & Footer
+ * Hellblau für einige Buttons
+ * Gelb für wichtige Buttons
+ * Hellgrau für Box-Hintergründe & Bearbeiten-Buttons in Kurs-Detailseite
+*/
+
+.dunkelblau {
+    background-color: #0E364A
+}
+
+.hellblau {
+    background-color: #66CDFF
+}
+
+.gelb {
+    background-color: #FFA73B
+}
+
+.hellgrau {
+    background-color: #E4EBED
+}
+
+/** Allgemeine Elemente und Styles, Anastasia Ruppel */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: auto;
+    font-size: 26px;
+    line-height: 1.5em;
+    font-family: Roboto, sans-serif;
+    color: #0E364A;
+}
+
+section {
+    height: 100vh;
+}
+
+/** Anastasia Ruppel
+ * Corporate Fonts auf Gesamtseite
+ * Oswald für Überschriften
+ * Roboto für alle anderen Texte (Fließtext, Links, Buttonbeschriftungen)
+ * Klasse "textweiss" für Schriften, die auf dunklem BG liegen
+ */
+
+h1, h2, h3, h4, h5 {
+    font-family: Oswald, sans-serif;
+    line-height: 1.3em;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 50px;
+    padding: 50px 0 0 50px;
+    margin: 0 70px;
+}
+
+a {
+    color: #fff;
+}
+
+.textweiss {
+    font-family: Roboto, sans-serif;
+    color: white;
+}
+
+
+/** Navbar von Anastasia Ruppel */
+
+#navibar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0E364A;
+    color: white;
+    z-index: 999;
+    border-radius: 0;
+    height: 105px;
+    padding: 0 20px;
+}
+
+#navibar .dropdown {
+    display: block;
+}
+
+#navibar .navbar-brand {
+    color: transparent;
+    background: url("../Icons/gofinmon_logo.png") no-repeat top left;
+    background-size: contain;
+    max-width: 140px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+#navibar input {
+    margin-top: 10px;
+    padding: 7px;
+}
+
+#navibar button {
+    margin-top: 10px;
+    transition: all 0.25s ease;
+}
+
+#navibar button:hover {
+    background-color: #FFA73B;
+}
+
+#navibar a {
+    margin-top: 20px;
+}
+
+#navibar a.dropdown-toggle {
+    margin-top: 20px;
+}
+
+#navibar .navbar-brand, #navibar .nav.navbar-nav {
+    width: 15%;
+    float: left;
+}
+
+#navibar .navbar-form {
+    width: 35%;
+    float: left;
+}
+
+#navibar .navbar-form .form-group {
+    position: relative;
+    display: block;
+    width: 90%;
+}
+
+#navibar .navbar-form input {
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    padding-left: 10px;
+    color: #0E364A;
+}
+
+#navibar .navbar-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    border-radius: 5px;
+    border: 0;
+    padding: 1px 10px;
+}
+
+#navibar .nav.navbar-nav.navbar-right {
+    width: 35%;
+    float: left;
+}
+
+/** Navbar Dropdown von Jessica Palladino; Anpassung von Anastasia Ruppel */
+
+.navbar-nav>li>.dropdown-menu {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.dropdown-toggle {
+    list-style: none;
+    width: 10em;
+    border: 1px solid;
+    background-color: silver;
+
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color:#E4EBED;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a.dropdown-toggle {
+    background-color: #0E364A;
+    border: 0;
+}
+
+.dropdown-menu{
+    background-color: #264a5c;
+    min-height: 185px;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    padding: 3px 20px;
+    margin: 5px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #6e8692;
+    min-width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.caret.toright{
+    transform: rotate(-90deg);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 3px 20px;
+    margin: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover*/
+.dropdown-content li a:hover {
+    background-color: #e6ebed;
+    color: #0E364A;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-menu > li:hover .dropdown-content {
+    right: -99%;
+    padding: 0;
+    top: 0;
+    min-height: 183px;
+}
+
+.dropdown-menu > li:hover .dropdown-content.second-level{
+    display: block;
+    padding-top: 3px;
+}
+
+.dropdown-content li{
+    list-style: none;
+}
+
+.dropdown-content.third-level{
+    display: none;
+    background-color: #b6c2c8;
+}
+
+.dropdown-content.second-level li:hover .dropdown-content.third-level{
+    display: block;
+    padding-top: 3px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #0E364A;}
+
+
+/** Section Startseite, Anastasia Ruppel */
+
+/** Startseite Banner */
+
+#startseite, #profil{
+    height: auto;
+}
+
+#startseite .startseite-banner {
+    background: url("../Bilder/banner_startseite.jpg") no-repeat right bottom;
+    background-size: cover;
+    padding: 196px 100px 185px;
+}
+
+#startseite .startseite-banner .startseite-banner-content {
+    font-size: 26px;
+    max-width: 710px;
+}
+
+#startseite .startseite-banner .startseite-banner-content h1,
+#startseite .startseite-banner .startseite-banner-content p {
+    background-color: rgba(255, 255, 255, .5);
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#startseite .startseite-banner .startseite-banner-content h1 {
+    display: inline-block;
+}
+
+#startseite .startseite-banner .startseite-banner-content button {
+    background-color: #FFA73B;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    padding: 20px;
+    margin-right: 45px;
+    letter-spacing: 0.025em;
+    border: 0;
+    transition: all 0.25s ease;
+}
+
+#startseite .startseite-banner .startseite-banner-content a {
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+#startseite .startseite-banner .startseite-banner-content button:hover {
+    background-color: #0E364A;
+}
+
+#startseite .startseite-banner .startseite-banner-content a:hover {
+    background-color: transparent;
+    color: #FFA73B;
+}
+
+/** Startseite Steps, Anastasia Ruppel */
+
+.steps {
+    padding: 80px 100px;
+}
+
+.steps .col-sm-4 .step-item {
+    max-width: 474px;
+    margin: 0 auto;
+}
+
+.steps .col-sm-4 img {
+    max-width: 175px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+/** Section Login */
+
+/** Erstellung von Benjamin James Turner; Anpassung von Anastasia Ruppel */
+
+#login{
+    background: url("../Bilder/banner_login.png");
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+}
+
+.loginbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 460px;
+    padding: 50px;
+    background: rgba(255,255,255,.3);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.3);
+    border-radius: 15px;
+}
+
+.loginbox h1 {
+    text-align: center;
+}
+
+.loginbox .inputbox {
+    position: relative;
+}
+
+.loginbox .inputbox input {
+    width: 100%;
+    height: 60px;
+    padding: 10px 10px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.loginbox .inputbox button {
+    background-color: #66CDFF;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    transition: all 0.25s ease;
+}
+
+.loginbox .inputbox button:hover {
+    background-color: #0E364A;
+    color: #FFA73B;
+}
+
+/** Section Kursuebersicht; Anastasia Ruppel */
+
+#kursuebersicht {
+    background-color: rgba(228,235,237,0.7);
+}
+
+#kursuebersicht h4 {
+    font-size: 30px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+}
+
+#kursuebersicht h4 a {
+    text-decoration: none;
+    color: #0E364A;
+    transition: 0.25s ease;
+}
+
+#kursuebersicht h4 a:hover {
+    color: #FFA73B;
+}
+
+#kursuebersicht div.col-sm-2 {
+    padding: 30px 0 0 20px;
+    font-size: 26px;
+    line-height: 1.2em;
+    position: relative;
+    right: 60px;
+    width: 16%;
+}
+
+#kursuebersicht div.row {
+    padding: 5px;
+    margin: 10px -5px;
+}
+
+#kursuebersicht .auto div.row {
+    border-bottom: 0.8px solid #0E364A;
+}
+
+#kursuebersicht div.col-sm-5 {
+    position: relative;
+    width: 65%;
+    padding: 0 5px 5px 45px;
+    text-align: justify;
+    line-height: 1.2em;
+}
+
+#kursuebersicht div.col-sm-5 .kleinerText {
+    font-size: 20px;
+}
+
+#kursuebersicht video {
+    width: 100%;
+}
+
+#kursuebersicht .auto {
+    margin-left: 10px;
+    height: 75vh;
+    overflow: auto;
+    width: 70%;
+    padding: 5px 5px;
+    border-radius: 8px;
+    border: 0.8px solid #0E364A;
+}
+
+/** Section Kurs-Detailansicht; Anastasia Ruppel */
+
+#kursdetailansicht {
+    background-color: #fff;
+}
+
+#kursdetailansicht button {
+    background-color: #fff;
+    border: 0.8px solid #0E364A;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    padding: 5px;
+}
+
+#kursdetailansicht button:hover {
+    background-color: #0E364A;
+    color: #FFA73B;
+}
+
+#kursdetailansicht .col-sm-3.button {
+    background-color: transparent;
+    line-height: 5vh;
+}
+
+#kursdetailansicht button#buchen {
+    background-color: #FFA73B;
+    color: #fff;
+    font-weight: bold;
+}
+
+#kursdetailansicht button#buchen:hover {
+    background-color: #0E364A;
+    color: #FFA73B;
+}
+
+#kursdetailansicht button#KursBewerten {
+    background-color: #0E364A;
+    color: #fff;
+    width: 100%;
+    margin-top: 30px;
+    transition: all 0.25s ease;
+}
+
+#kursdetailansicht button#KursBewerten:hover {
+    background-color: #FFA73B;
+}
+
+#kursdetailansicht h3 {
+    margin: 0 0 10px 30px;
+}
+
+#kursdetailansicht p#eigenschaften {
+    margin-left: 50px;
+}
+
+#kursdetailansicht div.col-sm-4 {
+    width: 35%;
+    margin: 40px 0 0 0;
+}
+
+#kursdetailansicht div.col-sm-3 {
+    background-color: #E4EBED;
+    width: 25%;
+    height: 30%;
+    position: relative;
+    right: 15px;
+    border-radius: 11px;
+    line-height: 1.5em;
+    padding-bottom: 5px;
+}
+
+#kursdetailansicht div.col-sm-3 img {
+    width: 35%;
+    margin: 5px;
+    border-radius: 11px;
+}
+
+#kursdetailansicht div.col-sm-3 h4 {
+    font-size: 15px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    float: right;
+    position: relative;
+    right: 40px;
+}
+
+#kursdetailansicht div.col-sm-3 div {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#kursdetailansicht div.col-sm-3 div#merkmale {
+    border-bottom: 0.8px solid #0E364A;
+}
+
+#kursdetailansicht div.col-sm-3 div#merkmale p {
+    font-size: 12px;
+    width: 45%;
+    text-align: center;
+    line-height: 1.2em;
+    float: right;
+    position: relative;
+    right: 20px;
+    bottom: 55px;
+}
+
+#kursdetailansicht div.col-sm-3 div#text p {
+    font-size: 14px;
+    margin: 10px 5px 0 5px;
+    width: 80%;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+#kursdetailansicht div.col-sm-2 {
+    width: 11%;
+    position: relative;
+    top: 130px;
+}
+
+#kursdetailansicht div.col-sm-2 span {
+    background-color: #E4EBED;
+    width: 20px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 8px;
+    position: relative;
+    top: 5px;
+}
+
+#kursdetailansicht video {
+    width: 85%;
+    height: auto;
+    margin: 0 10px 10px 30px;
+}
+
+#kursdetailansicht .modal button {
+    background-color: #0E364A;
+    transition: all 0.25s ease;
+}
+
+#kursdetailansicht .modal button:hover {
+    background-color: #FFA73B;
+}
+
+/** Section Kurs-Detailansicht Register; Anastasia Ruppel */
+
+#kursdetail-register {
+    background-color: #fff;
+}
+
+#kursdetail-register div.col-sm-3 {
+    width: 25%;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+#kursdetail-register div.container-fluid {
+    width: 80%;
+    border: 0.8px solid #0E364A;
+    position: relative;
+    top: 50px;
+}
+
+#kursdetail-register div.container-fluid.box {
+    height: 60vh;
+}
+
+#kursdetail-register div.col-sm-12 {
+    padding: 0;
+    width: 100%;
+}
+
+#kursdetail-register div.nav.nav-tabs li {
+    width: 25%;
+    border-left: 1px solid #0E364A;
+    background-color: #E4EBED;
+}
+
+#kursdetail-register .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #0E364A;
+    cursor: default;
+    background-color: transparent;
+    border: none;
+    border-bottom-color: transparent;
+}
+
+#kursdetail-register div.nav.nav-tabs li.active.one {
+    background-color: #fff;
+}
+
+#kursdetailansicht div.nav-tabs>li.active>a {
+    margin: 0 auto;
+}
+
+#kursdetail-register .col-sm-8 {
+    margin-top: 30px;
+}
+
+#kursdetailansicht textarea.form-control {
+    margin-top: 30px;
+    padding: 5px;
+    height: auto;
+}
+
+#kursdetailansicht img {
+    width: 20%;
+    margin: 10px;
+}
+
+
+/** Section Profil ueber 2 Seiten */
+
+/** Benjamin James Turner */
+
+#profil {
+    background-color: #E4EBED;
+}
+
+/** Anastasia Ruppel */
+
+#profil .form-control {
+    border-radius: 3px;
+    margin-right: 20px;
+}
+#profil .btn-btn-info {
+    padding: 6px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #66CDFF;
+    border-color: #0E364A;
+    border-radius: 12px;
+    color: #fff;
+}
+#profil .btn-btn-info:hover {
+    background-color: #0E364A;
+    color: #FFA73B;
+}
+
+#profil button {
+    border-radius: 5px;
+    border: 0;
+    background-color: #66CDFF;
+    color: #fff;
+    margin: 10px;
+    padding: 5px 5px;
+    transition: all 0.25s ease;
+}
+
+#profil button:hover {
+    background-color: #0E364A;
+}
+
+#profil img {
+    width: 220px;
+    height: auto;
+    padding: 5px;
+    margin: 15px 0;
+}
+
+#profil .name {
+    margin-top: 20px;
+}
+
+#profil span {
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#profil select {
+    color: #96999e;
+}
+
+#profil .col-sm-6 .col-sm-3{
+    width: 45%;
+    padding-left: 0;
+}
+
+#profil .col-sm-6 .col-sm-3 .input-group.mb-3{
+    width: 100%;
+}
+
+#profil .col-sm-6 > .input-group.mb-3{
+    width:87%;
+}
+
+#profil .col-sm-6 .col-sm-2{
+    width: 30%;
+    padding-left: 0;
+}
+
+#profil .modal .form-control {
+    margin-top: 5px;
+}
+
+#profil .modal #geburtstagsbox .input {
+    display: inline;
+}
+
+#profil .modal input#editgeburtstag.form-control {
+    width: 10%;
+}
+
+#profil .modal input#editgeburtsmonat.form-control {
+    width: 10%;
+}
+
+#profil .modal input#editgeburtsjahr.form-control {
+    width: 10%;
+}
+
+/** Section Belegte Kurse (Profil); Anastasia Ruppel */
+
+#profil_belegtkurse {
+    background-color: rgba(228,235,237,0.7);
+}
+
+#profil_belegtkurse span {
+    padding: 10px;
+    position: relative;
+    bottom: 10px;
+}
+
+#profil_belegtkurse h4 {
+    font-size: 30px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+}
+
+#profil_belegtkurse h4 a {
+    text-decoration: none;
+    color: #0E364A;
+    transition: 0.25s ease;
+}
+
+#profil_belegtkurse h4 a:hover {
+    color: #FFA73B;
+}
+
+#profil_belegtkurse div.col-sm-2 {
+    padding: 30px 0 0 20px;
+    font-size: 26px;
+    line-height: 1.2em;
+    position: relative;
+    right: 60px;
+    width: 16%;
+}
+
+#profil_belegtkurse div.row {
+    padding: 5px;
+    margin: 10px -5px;
+}
+
+#profil_belegtkurse .auto div.row {
+    border-bottom: 0.8px solid #0E364A;
+}
+
+#profil_belegtkurse div.col-sm-5 {
+    position: relative;
+    width: 65%;
+    padding: 0 5px 5px 45px;
+    text-align: justify;
+    line-height: 1.2em;
+}
+
+#profil_belegtkurse div.col-sm-5 .kleinerText {
+    font-size: 20px;
+}
+
+#profil_belegtkurse video {
+    width: 100%;
+}
+
+#profil_belegtkurse .auto {
+    width: 80%;
+    height: 75%;
+    overflow: auto;
+    margin-left: 185px;
+    padding: 10px;
+    border: 0.8px solid #0E364A;
+    border-radius: 11px;
+    position: relative;
+    top: 70px;
+}
+
+#profil_belegtkurse div.row.belegt {
+    height: 5vh;
+    padding: 5px;
+}
+
+#profil_belegtkurse p {
+    padding: 10px;
+}
+
+/** Infos von Jessica Palladino, ergänzt von Anastasia Ruppel*/
+.auto .col-sm-6 {
+    margin-left: 100px;
+    height: 75vh;
+    overflow: auto;
+    width: 940px;
+    padding: 20px 20px;
+    border-radius: 8px;
+    border: 0.8px solid #0E364A;
+}
+
+.col-sm-4 .autob {
+    background-color: #E4EBED;
+    margin-left: -30px;
+    height: 50vh;
+    width: 100%;
+    padding: 30px 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 0.8px solid #0E364A;
+}
+
+.col-sm-4 .autob #fett {
+    font-size: 18px;
+}
+
+#infos .logoinfo {
+    color: transparent;
+    background: url("../Icons/gofinmon_logo_dunkel.png") no-repeat bottom left;
+    background-size: contain;
+    max-width: 400px;
+    height: auto;
+    padding: 45px;
+    position: relative;
+    bottom: 15px;
+}
+
+#infos button {
+    float: right;
+    margin-top: 65px;
+    margin-right: 120px;
+    width: 590px;
+    padding: 30px;
+    border-radius: 8px;
+    border: 0.5px solid #0E364A;
+    background-color: #66CDFF;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    transition: all 0.25s ease;
+}
+
+#infos button:hover {
+    background-color: #0E364A;
+    color: #FFA73B;
+}
+
+#infos a {
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+#infos a:hover {
+    color: #FFA73B;
+}
+
+/** Section Belegte Kurse; Anastasia Ruppel */
+
+#profil_belegtkurse {
+    background-color: #E4EBED;
+}
+
+/** Section Support, Anastasia Ruppel */
+
+#support {
+    background-color: #E4EBED;
+}
+
+#support .form-control {
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 5px 5px;
+    border-radius: 0;
+    border: 0.25px solid #0E364A;
+}
+
+#support button {
+    float: right;
+    margin-right: 50px;
+    background-color: #66CDFF;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    border: 0;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+#support button:hover {
+    background-color: #0E364A;
+    color: #FFA73B;
+}
+
+#support #sel1.form-control {
+    width: 25%;
+}
+
+#support .form-group input {
+    width: 25%;
+}
+
+#support .form-group textarea {
+    width: 92%;
+}
+
+/** Footer */
+
+/** Anastasia Ruppel */
+
+footer {
+    padding: 30px 20px 10px;
+}
+
+.nebeneinander {
+    display: inline;
+    vertical-align:top;
+    position:relative;
+    list-style: none;
+}
+
+/* Sophie Multiszewski */
+
+footer.box {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.sophiezentriert {
+    text-align: center;
+    margin: 0;
+}
+
+footer.fschrift {
+    font-family: Roboto, sans-serif;
+}
+

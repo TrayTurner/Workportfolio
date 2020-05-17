@@ -1,0 +1,14 @@
+CREATE TRIGGER `delete benutzergruppenzuweisung` BEFORE DELETE ON `benutzer`
+ FOR EACH ROW DELETE FROM benutzergruppenzuweisung WHERE benutzergruppenzuweisung.fk_benutzer_id = OLD.pk_benutzer_id;
+
+CREATE TRIGGER `delete buchung` BEFORE DELETE ON `benutzer`
+ FOR EACH ROW DELETE FROM buchung WHERE buchung.fk_benutzer_id = OLD.pk_benutzer_id;
+
+CREATE TRIGGER `delete kurs` BEFORE DELETE ON `benutzer`
+ FOR EACH ROW DELETE FROM kurs WHERE kurs.fk_benutzer_id = OLD.pk_benutzer_id;
+
+CREATE TRIGGER `delete provision` BEFORE DELETE ON `benutzer`
+ FOR EACH ROW DELETE FROM provision WHERE provision.fk_benutzer_id = OLD.pk_benutzer_id;
+
+CREATE TRIGGER `delete zufriedenheitsgrad` BEFORE DELETE ON `benutzer`
+ FOR EACH ROW DELETE FROM zufriedenheitsgrad WHERE zufriedenheitsgrad.fk_benutzer_id = OLD.pk_benutzer_id;
